@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url('images/back.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+/* search box */
+.search_container{
+    display: flex;
+    justify-content: center;
+}
+.search_box{
+    width: 30%;
+    height: 50px;
+    margin-top: 5px;
+    border: 1px solid white;
+    border-radius: 20px;
+    position: relative;
+    background: none;
+}
+.search_box input{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 20px;
+    padding: 15px;
+    outline: none;
+    border: none;
+    background: none;
+    color: white;
+}
+input::placeholder{
+    color: white;
+    font-size: 15px;
+}
+#search-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 55px;
+    height: 100%;
+    background: none;
+    border-radius: 18px;
+    color: white;
+}
+
+.current{
+    display: flex;
+    justify-content: space-between;
+}
+.current .left{
+    margin: 50px;
+}
+.current .left .time{
+    font-size: 55px;
+}
+.left .date-section{
+    display: flex;
+    padding: 0px 10px;
+}
+.left .date-section .date{
+    padding-left: 5px;
+}
+.current .right{
+    margin: 50px;
+    position: relative;
+}
+.right .time-zone{
+    font-size: 25px;
+}
+.right .city{
+    font-size: 15px;
+    position: absolute;
+    right: 0;
+    margin-top: 10px;
+}
+.title{
+    margin-left: 50px;
+    font-size: 15px;
+}
+.today-section{
+    margin-top: 35px;
+}
+.today{
+    display: flex;
+    /* background-color: black; */
+    justify-content: space-evenly;
+
+    margin-top: 15px;
+}
+.today .img-des{
+    margin-left: 30px;
+    margin-top: 10px;
+    /* padding-right: 20px; */
+    /* box-shadow: 1px 0px gray; */
+}
+.today .img-des img{
+    height: 130px;
+}
+.today .img-des .des{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.day-night-temp{
+    display: flex;
+    flex-direction: column;
+    margin: auto 50px;
+    padding-left: 30px;
+    padding-right: 60px;
+    box-shadow: 1px 0px gray;
+}
+.day-night-temp .temp{
+    display: flex;
+    flex-direction: column;
+    font-size: 45px;
+}
+.day-night-temp .heading{
+    font-size: 10px;
+    padding-left: 2px;
+    padding-top: 25px;
+    color: white;
+}
+
+.today .weather-items{
+    display: flex;
+    text-align: center;
+    margin-left: 15px;
+    margin-top: 25px;
+}
+.today .weather-items .humidity{
+    margin-right: 70px;
+}
+.weather-items p{
+    font-size: 10px;
+    color: white;
+    padding-bottom: 10px;
+}
+.sep{
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, #CCC, transparent);
+}
+.weather-items .value{
+    font-size: 30px;
+    padding-top: 10px;
+}
+.today .weather-items img{
+    height: 80px;
+}
+.sun-moon{
+    display: flex;
+    width: 400px;
+    justify-content: space-evenly;
+    background-color: rgba(15, 15, 15,0.5);
+    margin: 20px;
+    margin-top: 6px;
+    border-radius: 15px;
+}
+.sun-moon img{
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    filter: invert(1);
+}
+.sun-moon .time{
+    display: flex;
+    margin: 10px;
+}
+.sun-moon p{
+    font-size: 15px;
+}
+.sun-moon .time p{
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 25px;
+}
+.sun{
+    margin: 20px;
+}
+.moon{
+    margin: 20px;
+}
+
+/* Hourly-forecast */
+.hourly-forecast-section{
+    margin-top: 35px;
+    background: rgba(15, 15, 15,0.7);
+    padding: 25px 0px;
+}
+.hourly-forecast{
+    display: flex;
+    margin-left: 15px;
+    margin-right: 15px;
+    justify-content: space-evenly;
+    overflow-x: scroll;
+    box-sizing: content-box;
+}
+.hourly-forecast .card{
+    margin-top: 20px;
+    margin-left: 30px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.am-pm{
+    font-size: 15px;
+}
+
+/* daily-forecast */
+.daily-forecast-section{
+    margin-top: 35px;
+    padding: 25px 0px;
+    background: rgba(15, 15, 15,0.7);
+}
+.daily-forecast-section .title{
+    font-size: 20px;
+    text-align: center;
+}
+.daily-forecast{
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-sizing: content-box;
+}
+.daily-forecast .card{
+    margin-top: 20px;
+    margin-left: 30px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
