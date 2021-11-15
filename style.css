@@ -4,9 +4,11 @@
     box-sizing: border-box;
 }
 body{
-    background: url('images/back.jpg') no-repeat center center fixed;
+    background: url('images/back.jpg') no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     color: white;
     overflow-x: hidden;
 }
@@ -92,16 +94,13 @@ input::placeholder{
 }
 .today{
     display: flex;
-    /* background-color: black; */
     justify-content: space-evenly;
-
+    flex-wrap: wrap;
     margin-top: 15px;
 }
 .today .img-des{
     margin-left: 30px;
     margin-top: 10px;
-    /* padding-right: 20px; */
-    /* box-shadow: 1px 0px gray; */
 }
 .today .img-des img{
     height: 130px;
@@ -241,4 +240,116 @@ input::placeholder{
     border-radius: 10px;
     padding: 10px;
     text-align: center;
+}
+
+/* responsive */
+@media all and (max-width: 600px) {
+    body{
+        background: url('images/back.jpg') no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    color: white;
+    overflow-x: hidden;
+    }
+    .search_box {
+        width: 75%;
+        height: 36px;
+        border-radius: 14px;
+    }
+    #search-btn {
+        width: 58px;
+        border-radius: 15px;
+    }
+    .current .left .time{
+        font-size: 30px;
+    }
+    .am-pm{
+        font-size: 12px;
+    }
+    .current .left {
+        margin: 18px;
+    }
+    .left .date-section{
+        font-size: 12px;
+    }
+    .right .time-zone {
+        font-size: 17px;
+    }
+    .current .right {
+        margin: 18px;
+    }
+    .right .city {
+        font-size: 12px;
+    }
+    .title {
+        margin: 0px auto;
+        text-align: center;
+        font-size: 12px;
+    }
+    
+    
+    .today {
+        display: flex;
+        justify-content: start;
+        margin-top: 0px;
+    }
+    .today .img-des {
+        display: inline-flex;
+        margin-left: 8px;
+        margin-top: 0px;
+    }
+    .today .img-des .des {
+        display: inline;
+        font-size: 15px;
+        text-align: center;
+        padding: 38px 0px;
+    }
+    .today .img-des img {
+        height: 81px;
+    }
+    .day-night-temp .temp {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+    }
+    .day-night-temp .heading {
+        font-size: 8px;
+        padding-top: 13px;
+    }
+    .today .weather-items img {
+        height: 40px;
+    }
+    .weather-items .value {
+        font-size: 20px;
+        padding-top: 4px;
+    }
+    .weather-items p {
+        font-size: 9px;
+        color: white;
+        padding-bottom: 5px;
+    }
+    .sun-moon {
+        width: 321px;
+        margin: 10px;
+        margin-top: 5px;
+    }
+    .sun-moon p {
+        font-size: 12px;
+    }
+    .sun-moon .time p {
+        font-size: 15px;
+    }
+    .hourly-forecast {
+        justify-content: start;
+        overflow-x: scroll;
+        box-sizing: content-box;
+        margin-left: 0px;
+    }
+    .daily-forecast {
+        justify-content: start;
+        overflow-x: scroll;
+        margin-left: 0px;
+    }
 }
